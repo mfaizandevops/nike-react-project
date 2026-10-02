@@ -1,7 +1,5 @@
-import amazon from "../assets/images/amazon.png";
-import flipkart from "../assets/images/flipkart.png";
-import shoe from "../assets/images/shoe_image.png";
 const HeroSection = () =>{
+  const baseUrl = import.meta.env.BASE_URL;
   return(
  <main className="hero container">
   <div className="hero-content">
@@ -14,13 +12,13 @@ const HeroSection = () =>{
     <div className="shopping">
         <p>Also Available On</p>
         <div className="brand-icons">
-            <img src={amazon} alt="amazon-logo" />
-            <img src={flipkart} alt="flipcard-logo" />
+            <img src={`${baseUrl}images/amazon.png`} alt="amazon-logo" />
+            <img src={`${baseUrl}images/flipkart.png`} alt="flipkart-logo" />
         </div>
     </div>
   </div>
   <div className="hero-image">
-    <img src={shoe} alt="hero-logo" />
+    <img src={`${baseUrl}images/shoe_image.png`} alt="hero-logo" />
   </div>
  </main>
   );

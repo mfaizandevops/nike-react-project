@@ -1,5 +1,5 @@
 import { useState } from "react";
-import brandLogo from "../assets/images/brand_logo.png";
+
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -7,7 +7,7 @@ const Navigation = () => {
     <nav className="container">
 
       <div className="logo">
-        <img src={brandLogo} alt="logo" />
+        <img src={`${import.meta.env.BASE_URL}images/brand_logo.png`} alt="logo" />
       </div>
 
       {/* Toggle Button */}
