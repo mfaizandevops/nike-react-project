@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* GLOBAL */
+:root {
+  --red-color: #d01c28;
+  --white-color: #fff;
+  --black-color: #111;
+  --gray-color: #555;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+button {
+  font-family: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+/* NAVBAR */
+nav.container {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.logo img {
+  width: 76px;
+}
+/* Navigation */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin-left: auto;
+  margin-right: 0;
+}
+.nav-menu li {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.nav-menu li:hover {
+  color: var(--red-color);
+}
+/* Login */
+.login-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 0;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: #b91823;
+}
+/* MOBILE MENU BUTTON */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--black-color);
+  font-size: 28px;
+  cursor: pointer;
+}
+/* HERO */
+.hero {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+/* HERO CONTENT */
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+.hero-content h1 {
+  font-size: clamp(60px, 7vw, 108px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -3px;
+  margin-bottom: 30px;
+  color: var(--black-color);
+}
+/* Paragraph */
+.hero-content > p {
+  max-width: 400px;
+  color: var(--gray-color);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+/* HERO BUTTONS */
+.hero-btn {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+.hero-btn button {
+  padding: 8px 13px;
+  min-width: 113px;
+  border: 1px solid var(--red-color);
+  border-radius: 0;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.hero-btn button:hover {
+  background-color: #b91823;
+}
+/* Secondary Button */
+.hero-btn .secondary-btn {
+  background-color: transparent;
+  color: var(--gray-color);
+  border: 1px solid var(--gray-color);
+}
+.hero-btn .secondary-btn:hover {
+  background-color: var(--red-color);
+  border-color: var(--red-color);
+  color: var(--white-color);
+}
+/* ========================================
+   SHOPPING
+======================================== */
+.shopping {
+  margin-top: 5px;
+}
+.shopping p {
+  color: var(--gray-color);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.brand-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.brand-icons img {
+  width: 35px;
+  height: auto;
+}
+/* ========================================
+   HERO IMAGE
+======================================== */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 560px;
+  object-fit: contain;
+}
+/* ========================================
+   TABLET
+   901px - 1100px
+======================================== */
+@media (max-width: 1100px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .hero {
+    gap: 20px;
+  }
+  .hero-content h1 {
+    font-size: 78px;
+    line-height: 0.98;
+  }
+  .hero-image img {
+    max-width: 480px;
+  }
+}
+/* ========================================
+   TABLET
+   900px AND BELOW
+======================================== */
+@media (max-width: 900px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* Navbar */
+  nav.container {
+    height: 70px;
+  }
+  .logo img {
+    width: 70px;
+  }
+  /* Hamburger */
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    font-size: 28px;
+  }
+  /* Hide normal menu */
+  .nav-menu {
+    display: none;
+  }
+  /* Open menu */
+  .nav-menu.active {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin: 0;
+    background-color: var(--white-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+  }
+  .nav-menu.active li {
+    font-size: 15px;
+  }
+  /* Hero */
+  .hero {
+    min-height: calc(100vh - 70px);
+    gap: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  /* Heading */
+  .hero-content h1 {
+    font-size: clamp(50px, 8vw, 72px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+  }
+  /* Paragraph */
+  .hero-content > p {
+    max-width: 360px;
+    font-size: 12px;
+  }
+  /* Image */
+  .hero-image img {
+    max-width: 420px;
+  }
+}
+/* ========================================
+   MOBILE
+   600px AND BELOW
+======================================== */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* Navbar */
+  nav.container {
+    height: 65px;
+  }
+  .logo img {
+    width: 68px;
+  }
+  .menu-toggle {
+    font-size: 26px;
+  }
+  /* Mobile Menu */
+  .nav-menu.active {
+    top: 65px;
+    padding: 22px 20px;
+    gap: 16px;
+  }
+  /* ====================================
+     HERO MOBILE
+  ==================================== */
+  .hero {
+    min-height: auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+  /* Content */
+  .hero-content {
+    width: 100%;
+  }
+  /* Heading */
+  .hero-content h1 {
+    font-size: clamp(40px, 11vw, 58px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+  }
+  /* Paragraph */
+  .hero-content > p {
+    max-width: 450px;
+    margin: 0 auto 22px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  /* Buttons */
+  .hero-btn {
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .hero-btn button {
+    min-width: 105px;
+    padding: 9px 15px;
+    font-size: 14px;
+  }
+  /* Shopping */
+  .shopping {
+    margin-top: 5px;
+  }
+  .shopping p {
+    font-size: 11px;
+    margin-bottom: 7px;
+  }
+  .brand-icons {
+    justify-content: center;
+    gap: 12px;
+  }
+  .brand-icons img {
+    width: 32px;
+  }
+  /* Image */
+  .hero-image {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .hero-image img {
+    width: 85%;
+    max-width: 330px;
+    margin: 0 auto;
+  }
+}
+/* ========================================
+   SMALL MOBILE
+   400px AND BELOW
+======================================== */
+@media (max-width: 400px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* Navbar */
+  nav.container {
+    height: 60px;
+  }
+  .logo img {
+    width: 65px;
+  }
+  .menu-toggle {
+    font-size: 24px;
+  }
+  /* Menu */
+  .nav-menu.active {
+    top: 60px;
+    padding: 18px;
+    gap: 14px;
+  }
+  .nav-menu.active li {
+    font-size: 14px;
+  }
+  .nav-menu.active .login-btn {
+    padding: 8px 24px;
+    font-size: 13px;
+  }
+  /* Hero */
+  .hero {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    gap: 18px;
+  }
+  /* Heading */
+  .hero-content h1 {
+    font-size: 35px;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+  }
+  /* Paragraph */
+  .hero-content > p {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+  /* Buttons */
+  .hero-btn {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .hero-btn button {
+    min-width: 95px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  /* Shopping */
+  .shopping p {
+    font-size: 10px;
+  }
+  .brand-icons {
+    gap: 10px;
+  }
+  .brand-icons img {
+    width: 28px;
+  }
+  /* Image */
+  .hero-image img {
+    width: 88%;
+    max-width: 270px;
+  }
+}
+/* ========================================
+   EXTRA SMALL
+   350px AND BELOW
+======================================== */
+@media (max-width: 350px) {
+  .hero-content h1 {
+    font-size: 31px;
+  }
+  .hero-content > p {
+    font-size: 10px;
+  }
+  .hero-btn button {
+    min-width: 90px;
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+  .hero-image img {
+    max-width: 240px;
+  }
+}
