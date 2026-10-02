@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import brandLogo from "../assets/images/brand_logo.png";
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -7,7 +7,7 @@ const Navigation = () => {
     <nav className="container">
 
       <div className="logo">
-        <img src="/images/brand_logo.png" alt="logo" />
+        <img src={brandLogo} alt="logo" />
       </div>
 
       {/* Toggle Button */}
@@ -32,5 +32,4 @@ const Navigation = () => {
     </nav>
   );
 };
-
 export default Navigation;
